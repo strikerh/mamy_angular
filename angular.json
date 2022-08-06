@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mmy_app/browser",
+            "outputPath": "dist/mmy_app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -104,49 +104,6 @@
             ],
             "scripts": []
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/mmy_app/server",
-            "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "inlineStyleLanguage": "scss"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "app-shell": {
-          "builder": "@angular-devkit/build-angular:app-shell",
-          "options": {
-            "route": "shell"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "mmy_app:build:production",
-              "serverTarget": "mmy_app:server:production"
-            },
-            "development": {
-              "browserTarget": "mmy_app:build:development",
-              "serverTarget": "mmy_app:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
