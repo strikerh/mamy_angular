@@ -90,7 +90,7 @@ function generateThemesObject(themes)
 }
 
 // -----------------------------------------------------------------------------------------------------
-// @ FUSE TailwindCSS Main Plugin
+// @ mmy TailwindCSS Main Plugin
 // -----------------------------------------------------------------------------------------------------
 const theming = plugin.withOptions((options) => ({
         addComponents,

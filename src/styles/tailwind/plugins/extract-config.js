@@ -6,7 +6,7 @@ const extractConfig = plugin(({
     theme
 }) =>
 {
-    addVariant('fuse-tailwind-extracted-config', ({container}) =>
+    addVariant('mmy-tailwind-extracted-config', ({container}) =>
     {
         // Prepare the extracted config variable
         let extractedConfig = '';
@@ -18,7 +18,7 @@ const extractConfig = plugin(({
         });
 
         // Themes
-        (theme('fuse.themes')).forEach((value) =>
+        (theme('mmy.themes')).forEach((value) =>
         {
             Object.entries(value).forEach(([key, value]) =>
             {
@@ -28,7 +28,7 @@ const extractConfig = plugin(({
 
         // Append the extracted config
         container.append(`
-            .fuse-tailwind-extracted-config {
+            .mmy-tailwind-extracted-config {
                 ${extractedConfig}
             }
         `);
