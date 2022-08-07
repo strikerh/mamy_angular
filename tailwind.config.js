@@ -7,7 +7,7 @@ const generatePalette = require(path.resolve(__dirname, ('src/styles/tailwind/ut
 /**
  * Themes
  */
-
+// console.log('path.resolve(__dirname', path.resolve(__dirname) );
 const mmyPrimary = generatePalette('#9f2d2d');
 const mmyAccent = generatePalette('#0b8c89');
 
@@ -33,10 +33,9 @@ const themes = {
 
 };
 
-
-module.exports = {
+const config ={
   darkMode: 'class',
-  content: ['./src/**/*.{html,scss,ts}'],
+  content    : ['./src/**/*.{html,scss,ts}'],
   important: true,
   theme: {
     fontSize: {
@@ -251,7 +250,6 @@ module.exports = {
     verticalAlign: false
   },
   plugins: [
-    require(path.resolve(__dirname, ('src/styles/tailwind/plugins/extract-config'))),
     require(path.resolve(__dirname, ('src/styles/tailwind/plugins/utilities'))),
     require(path.resolve(__dirname, ('src/styles/tailwind/plugins/icon-size'))),
     require(path.resolve(__dirname, ('src/styles/tailwind/plugins/theming')))({themes}),
@@ -262,3 +260,5 @@ module.exports = {
     require('tailwindcss-rtl')
   ],
 }
+
+module.exports = config;

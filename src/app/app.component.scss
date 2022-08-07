@@ -1,3 +1,4 @@
-.example-spacer {
-  flex: 1 1 auto;
+:host {
+  @apply w-full h-full flex flex-col justify-between;
+
 }

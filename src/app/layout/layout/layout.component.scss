@@ -1,0 +1,9 @@
+:host {
+@apply flex flex-col h-full;
+  width: 100%;
+  min-height: 100%;
+}
+
+.sticky{
+  @apply fixed top-0 z-20
+}
