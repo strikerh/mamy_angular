@@ -27,17 +27,10 @@ export class LayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('asd');
 
-    setTimeout(() => {
-      const asd: HTMLElement = this.titleToolbar?._elementRef.nativeElement
-      const asd1: ElementRef<HTMLElement> = this.container1
-      console.log('asd1', asd1.nativeElement);
-
-    }, 500)
   }
 
   log($event: Event) {
-
+console.log('sadasd')
   }
 }

@@ -11,10 +11,12 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDividerModule} from "@angular/material/divider";
 import {LayoutModule} from "./layout/layout.module";
+import {IconsModule} from "../@fuse/icons/icons.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,9 @@ import {LayoutModule} from "./layout/layout.module";
       registrationStrategy: 'registerWhenStable:30000'
     }),
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    IconsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

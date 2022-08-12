@@ -1,60 +1,41 @@
-<div dir="rtl" #container1 (click)="log($event)">
+<div class="w-full max-w-200 mx-auto shadow-2xl bg-gray-200  h-full flex-grow"
+     dir="rtl" #container1>
+
   <mat-toolbar class="w-full justify-between shadow-xl" style="height: 60px">
-    <span style="width: 40px"></span>
-    <div class="flex-grow text-center"><img class="h-full w-auto inline" src="/assets/images/logo-mobile-1x.png"
-                                            alt="يوميات مامي"></div>
+
+    <div class="flex-grow text-center">
+      <img class="h-full w-auto inline" src="/assets/images/logo-mobile-1x.png" alt="يوميات مامي">
+    </div>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
+      <mat-icon svgIcon="apps"></mat-icon>
+    </button>
 
 
   </mat-toolbar>
 
-  <mat-toolbar #titleToolbar class="flex w-full justify-between shadow-xl" [class.sticky]="isSticky" style="height: 60px">
+  <mat-toolbar #titleToolbar class="flex w-full justify-start shadow-xl" [class.sticky]="isSticky"
+               style="height: 60px">
 
 
-    <div class="flex flex-row items-center">
-      <mat-icon>menu</mat-icon>
-      <h1 style="">أسبوع بأسبوع</h1></div>
+    <div class="flex flex-row flex-grow items-center">
+      <mat-icon svgIcon="calendar_today" class="me-2"></mat-icon>
+      <h1>أسبوع بأسبوع</h1></div>
 
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+      <mat-icon svgIcon="notifications"></mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon svgIcon="heroicons_outline:dots-vertical"></mat-icon>
     </button>
   </mat-toolbar>
 
-  <div class="flex-grow  overflow-y-auto">asd
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum facilis nostrum obcaecati vero! Aperiam,
-    consequuntur corporis cumque dicta ducimus et fugit ipsam nam natus nobis praesentium repellendus reprehenderit,
-    similique.
+  <main class="flex-grow   overflow-y-auto mx-2 mt-3">
 
-  </div>
+    <router-outlet *ngIf="true"></router-outlet>
 
-  <div class="h-1/2 ">asasdas<br>dd</div>
+
+  </main>
+
+
 </div>
+

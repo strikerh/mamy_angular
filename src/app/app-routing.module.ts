@@ -6,7 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    children   : [
+      {path: 'week-by-week', loadChildren: () => import('./modules/week-by-week/week-by-week.module').then(m => m.WeekByWeekModule)},
 
+    ]
   },
 ];
 

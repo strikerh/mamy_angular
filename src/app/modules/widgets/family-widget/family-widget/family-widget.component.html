@@ -1,0 +1,47 @@
+<mat-card class="my-3">
+  <mat-card-title class="flex justify-between">
+    <span> أفراد العائلة</span>
+    <mat-icon svgIcon="heroicons_outline:dots-vertical"></mat-icon>
+  </mat-card-title>
+
+  <mat-card-content class="flex flex-row overflow-hidden h-36">
+    <div *ngIf="tab==0"  class="w-full min-h-36 -mx-3 overflow-x-auto absolute"  @fadeInRight @fadeOutRight >
+
+      <div class=" h-full flex flex-row flex-shrink-0 justify-start items-center gap-3 mx-auto w-fit mt-2">
+        <button class="w-26" *ngFor="let kid of family" (click)="selectKid(kid)">
+          <div mat-ripple class="rounded-full overflow-hidden aspect-1 w-26 h-26">
+            <img [src]="kid.imgUrl">
+          </div>
+          <div class="text-center text-lg font-medium mt-1"> {{kid.name}}</div>
+        </button>
+      </div>
+    </div>
+
+
+
+  <div *ngIf="tab==1" @fadeInLeft @fadeOutLeft (click)="tab=0"
+                    class=" flex flex-row  flex-shrink-0 items-center absolute" style="width: calc( 100% - 16px - 16px)">
+    <div class="max-w-30 min-w-24 ">
+      <div class="rounded-full overflow-hidden aspect-1 "><img [src]="selectedKid.imgUrl"></div>
+    </div>
+    <div class="ms-4 flex-grow ">
+      <div class="mb-2 text-xl font-bold">{{selectedKid.name}}</div>
+      <div class="ms-4 text-black font-medium">
+        <div>{{selectedKid.disc}}</div>
+        <div>العمر:{{selectedKid.age}}</div>
+        <div>عيد ميلاده: {{selectedKid.dob}}</div>
+      </div>
+<div class="flex justify-end">
+  <button mat-flat-button color="accent" class="mat-dense text-xs justify-self-end px-3">الملف الشخصي</button>
+
+</div>
+    </div>
+
+      <mat-icon svgIcon="chevron_left"></mat-icon>
+
+
+  </div>
+
+  </mat-card-content>
+
+</mat-card>

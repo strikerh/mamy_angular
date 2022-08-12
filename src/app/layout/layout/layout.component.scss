@@ -1,7 +1,8 @@
 :host {
-@apply flex flex-col h-full;
-  width: 100%;
-  min-height: 100%;
+@apply flex flex-col flex-grow bg-gray-500 w-full;
+
+
+
 }
 
 .sticky{

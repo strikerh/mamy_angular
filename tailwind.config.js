@@ -30,7 +30,27 @@ const themes = {
       500: colors.red['50']
     }
   },
-
+  'brand' : {
+    primary: mmyPrimary
+  },
+  'teal'  : {
+    primary: {
+      ...colors.teal,
+      DEFAULT: colors.teal[600]
+    }
+  },
+  'rose'  : {
+    primary: colors.rose
+  },
+  'purple': {
+    primary: {
+      ...colors.purple,
+      DEFAULT: colors.purple[600]
+    }
+  },
+  'amber' : {
+    primary: colors.amber
+  }
 };
 
 const config ={
@@ -66,14 +86,14 @@ const config ={
         'spin-slow': 'spin 3s linear infinite'
       },
       colors: {
-        gray: colors.slate
+        gray: colors.zinc
       },
       flex: {
         '0': '0 0 auto'
       },
       fontFamily: {
         sans: `"Tajawal", ${defaultTheme.fontFamily.sans.join(',')}`,
-        mono: `"IBM Plex Mono", ${defaultTheme.fontFamily.mono.join(',')}`
+        mono: `"Tajawal", ${defaultTheme.fontFamily.mono.join(',')}`
       },
       opacity: {
         12: '0.12',

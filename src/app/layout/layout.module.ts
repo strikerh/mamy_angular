@@ -6,6 +6,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
 
 
 
@@ -13,13 +14,14 @@ import {MatButtonModule} from "@angular/material/button";
   declarations: [
     LayoutComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    MatDividerModule,
-    MatToolbarModule,
-    MatButtonModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatIconModule,
+        MatDividerModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatCardModule
+    ]
 })
 export class LayoutModule { }
