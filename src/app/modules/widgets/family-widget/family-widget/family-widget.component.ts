@@ -41,6 +41,13 @@ export class FamilyWidgetComponent implements OnInit {
       dob: '22/08/2021',
       age: ' 3 أشهر',
       disc: 'آخر العنقود',
+    },
+    {
+      name: 'أحمد',
+      imgUrl: 'https://i.imgur.com/I6EfdEP.jpeg',
+      dob: '22/08/2021',
+      age: ' 3 أشهر',
+      disc: 'آخر العنقود',
     }
   ]
   tab = 0

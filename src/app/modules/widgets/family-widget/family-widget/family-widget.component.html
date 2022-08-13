@@ -1,11 +1,12 @@
-<mat-card class="my-3">
-  <mat-card-title class="flex justify-between">
+<mat-card class="my-3 p-0">
+  <mat-card-title class="flex justify-between p-3">
     <span> أفراد العائلة</span>
     <mat-icon svgIcon="heroicons_outline:dots-vertical"></mat-icon>
   </mat-card-title>
 
-  <mat-card-content class="flex flex-row overflow-hidden h-36">
-    <div *ngIf="tab==0"  class="w-full min-h-36 -mx-3 overflow-x-auto absolute"  @fadeInRight @fadeOutRight >
+  <mat-card-content class="flex flex-row overflow-hidden h-40">
+    <div *ngIf="tab==0"  class="w-full1 min-h-36  overflow-x-auto absolute pb-6" style="width: calc( 100% - 4px )"
+         @fadeInRight @fadeOutRight >
 
       <div class=" h-full flex flex-row flex-shrink-0 justify-start items-center gap-3 mx-auto w-fit mt-2">
         <button class="w-26" *ngFor="let kid of family" (click)="selectKid(kid)">

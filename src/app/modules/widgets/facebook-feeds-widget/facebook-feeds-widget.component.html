@@ -1,0 +1,64 @@
+<mat-card class="my-3 p-0 overflow-hidden">
+  <mat-card-title class="flex justify-between  p-3">
+    <span> منشوراتنا على الفيسبوك  </span>
+    <mat-icon svgIcon="heroicons_outline:dots-vertical"></mat-icon>
+  </mat-card-title>
+
+  <mat-card-content class="">
+    <mat-tab-group headerPosition="below">
+      <mat-tab [label]="days" *ngFor="let days of ['فيسبوك']">
+        <div *ngFor="let hj of [1,2,3,4]"
+             class="m-3 border-b-4 border-gray-300">
+          <div class="flex flex-row mb-2 border-b border-gray-100">
+            <img class="w-10 h-10 rounded-full"
+              src="https://scontent.fdmm2-2.fna.fbcdn.net/v/t1.6435-1/70585264_126920128661459_7281496822730719232_n.png?stp=dst-png_p120x120&_nc_cat=106&ccb=1-7&_nc_sid=1eb0c7&_nc_ohc=zanySrnbLloAX_hVyJB&tn=R1ok2JyNOblxF-gL&_nc_ht=scontent.fdmm2-2.fna&oh=00_AT9NoV27jn9JGI-AGg7R9pqRifpmOqtvrrVNYtQFlt34jA&oe=631EC860"
+              alt="jkj">
+            <div class="ms-4">
+              <div class="font-bold">يوميات مامي - MamyDays</div>
+            <div class="text-sm flex items-center">  3 ساعات <mat-icon class="ms-2 icon-size-3" svgIcon="public"></mat-icon></div>
+            </div>
+          </div>
+
+          <p class="mx-1">هل انتهت رحلة الحمل وبدأت رحلت الاعتناء بالمولود الجديد؟ هل تشعرين بالمسؤولية من وجود طفل صغير بجوارك؟ بالتأكيد تشعرين بذلك،…</p>
+
+
+          <div>
+            <figure class="h-60 overflow-hidden  flex justify-center mat-elevation-z3 relative bg-gray-600">
+
+              <img class="bg-for-img" src="https://mamydays.com/wp-content/uploads/2021/09/images-20.jpeg"
+                   alt="تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها">
+
+              <img class="img-h-max shadow-2xl" src="https://mamydays.com/wp-content/uploads/2021/09/images-20.jpeg"
+                   alt="تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها">
+
+            </figure>
+
+            <div class="flex justify-between py-3">
+              <div class="bg-gray-200 px-3 py-2 rounded-full flex justify-center">
+                <mat-icon class="icon-size-4 me-1" svgIcon="heroicons_solid:thumb-up"></mat-icon>
+                124 اعجاب
+              </div>
+              <div class="bg-gray-200 px-3 py-2 rounded-full flex justify-center">
+                <mat-icon class="icon-size-4 me-1" svgIcon="heroicons_solid:chat-alt"></mat-icon>
+                124 تعليق
+              </div>
+              <div class="bg-gray-200 px-3 py-2 rounded-full flex justify-center">
+                <mat-icon class="icon-size-4 me-1" svgIcon="heroicons_solid:share"></mat-icon>
+               انشري
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-card-content>
+
+</mat-card>
+

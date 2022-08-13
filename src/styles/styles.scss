@@ -75,6 +75,7 @@ mat-form-field.mat-dense {
 
 }
 
+
 .mat-flat-button.mat-dense, .mat-stroked-button.mat-dense, .mat-raised-button.mat-dense, .mat-button.mat-dense {
   height: 30px;
   min-height: 30px;
@@ -90,3 +91,33 @@ mat-form-field.mat-dense {
   min-width: 30px !important;
 }
 
+
+.text-secondary{
+  color: black;
+  @apply opacity-70
+}
+
+
+.img-h-max{
+
+  height: 100%;
+  width: auto;
+  max-width: unset;
+  position: relative;
+  z-index: 3;
+}
+
+.bg-for-img{
+  z-index: 0;
+  position: absolute;
+
+  top: -5%;
+  right: -5%;
+  width: 110%;
+  height: 110%;
+  max-width: unset;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  opacity: 0.7;
+  background-color: black;
+}

@@ -1,0 +1,30 @@
+<div>
+  <div class="flex flex-row justify-between  px-2 items-center text-secondary">
+    <div>السبت 20 فبراير</div>
+    <div>الأسبوع رقم 5</div>
+  </div>
+
+  <div class="flex flex-row py-3 ps-2 pe-1 items-center ">
+    <div class="w-1/3 pe-4">
+    <button mat-ripple class="flex justify-between rounded w-full">
+      <span class="text-xl">الجميع</span>
+      <mat-icon svgIcon="keyboard_arrow_down"></mat-icon>
+    </button>
+  </div>
+    <div class="flex-grow flex justify-between items-center">
+      <button mat-ripple class="w-6 h-6 rounded-full flex justify-center items-center">
+        <mat-icon class="icon-size-8" svgIcon="arrow_right"></mat-icon>
+      </button>
+
+      <button *ngFor="let week of weeks"
+        mat-ripple class="w-6 h-6 rounded-full flex justify-center items-center">
+        <mat-icon class="icon-size-3" svgIcon="fiber_manual_record"></mat-icon>
+      </button>
+
+
+      <button mat-ripple class="w-6 h-6 rounded-full flex justify-center items-center">
+        <mat-icon class="icon-size-8" svgIcon="arrow_left"></mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
