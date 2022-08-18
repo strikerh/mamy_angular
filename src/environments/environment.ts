@@ -5,6 +5,18 @@
 export const environment = {
   production: false,
 
+  bashUrl: 'http://localhost:4200',
+  wpUrl: 'http://profile.mamydays.lcl',
+
+  authConfig: {
+    authUrl: 'http://profile.mamydays.lcl/oauth/authorize',
+    accessTokenUrl: 'http://profile.mamydays.lcl/oauth/token/',
+    client_id: 'fwB3MSTlVyyU9tfXUMTCy6AMvULIVzcwelMSQ1gO',
+    client_secret: 'r4oX7ng95kFoZD5FCQkkZlEkO90wykPs35OxjJkq',
+    redirect_uri: 'http://localhost:4200',
+    response_type: 'code',
+  }
+
 };
 
 /*
