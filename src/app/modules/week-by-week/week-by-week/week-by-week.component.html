@@ -1,7 +1,7 @@
 <app-week-navigation></app-week-navigation>
 <app-family-widget></app-family-widget>
 <app-advice-widget></app-advice-widget>
-<app-last-articles></app-last-articles>
-<app-selected-for-you></app-selected-for-you>
+<app-last-articles *ngIf="weeklyFeeds" [lastNews]="weeklyFeeds.lastNews"></app-last-articles>
+<app-selected-for-you *ngIf="weeklyFeeds" [selectedArticles]="weeklyFeeds.selectedArticles"></app-selected-for-you>
 <app-facebook-feeds-widget></app-facebook-feeds-widget>
 <app-last-articles></app-last-articles>

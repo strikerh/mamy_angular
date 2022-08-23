@@ -1,60 +1,50 @@
-<mat-card class="my-3 p-0 overflow-hidden">
-  <mat-card-title class="flex justify-between  p-3">
-    <span> مقالات الأسبوع <sub class="text-accent text-secondary">المختارة خصيصا لك</sub> </span>
-    <mat-icon svgIcon="heroicons_outline:dots-vertical"></mat-icon>
-  </mat-card-title>
-
-  <mat-card-content class="">
-    <mat-tab-group headerPosition="below">
-      <mat-tab [label]="days" *ngFor="let days of ['الكل', 'انت', 'أحلام', 'محمد']">
-        <div class="m-3">
-       <div>
-        <figure class="h-60 overflow-hidden  flex justify-center mat-elevation-z3 relative bg-gray-600">
-
-          <img class="bg-for-img" src="https://mamydays.com/wp-content/uploads/2021/09/images-20.jpeg"
-               alt="تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها">
-
-          <img class="img-h-max shadow-2xl" src="https://mamydays.com/wp-content/uploads/2021/09/images-20.jpeg"
-               alt="تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها">
-
-        </figure>
-
-         <div class="meta flex flex-row items-center my-2 mx-1">
-           <div class="flex items-center me-3 text-secondary">
-             <mat-icon class="icon-size-4 me-2 text-secondary" svgIcon="mat_outline:account_circle"></mat-icon>
-            زينب محمد
-           </div>
-           <div class="flex items-center text-secondary"> <mat-icon class="icon-size-4 me-2" svgIcon="mat_solid:access_time"></mat-icon>
-             منذ 3 ساعات
-           </div>
-         </div>
-
-         <div class="font-bold text-lg mb-2 mx-1">كل ما تريدين معرفته للتعامل مع حديثي الولادة</div>
-
-         <p class="mx-1">هل انتهت رحلة الحمل وبدأت رحلت الاعتناء بالمولود الجديد؟ هل تشعرين بالمسؤولية من وجود طفل صغير بجوارك؟ بالتأكيد تشعرين بذلك،…</p>
-
-       </div>
+<app-card title="عرفتي آخر الأخبار" class="mt-10" [tabTitles]="['الكل', 'انت', 'أحلام', 'محمد']">
 
 
-          <div class="article flex py-3 mx-1" *ngFor="let d of [0,1,2,3]">
-            <div class="max-w-1/3">
-              <div class="w-26 h-20 overflow-hidden  flex justify-center mat-elevation-z3">
-                <img class=" img-h-max" src="https://mamydays.com/wp-content/uploads/2021/03/images-6-780x385.jpeg"
-                     alt="تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها">
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="flex items-center">
-                <mat-icon class="icon-size-4 me-2 text-secondary" svgIcon="mat_solid:access_time"></mat-icon>
-                منذ 3 ساعات
-              </div>
-              <div class="font-bold text-lg">تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها</div>
-            </div>
+  <div class="tab1 m-3">
+    <div>
+      <figure class="h-60 overflow-hidden  flex justify-center mat-elevation-z3 relative bg-gray-600">
+
+        <img class="bg-for-img" [src]="selectedArticles[0].image"
+             [alt]="selectedArticles[0].post_title">
+
+        <img class="img-h-max shadow-2xl" [src]="selectedArticles[0].image"
+             [alt]="selectedArticles[0].post_title">
+
+      </figure>
+
+      <div class="meta flex flex-row items-center my-2 mx-1">
+        <div class="flex items-center me-3 text-secondary">
+          <mat-icon class="icon-size-4 me-2 text-secondary" svgIcon="mat_outline:account_circle"></mat-icon>
+          {{selectedArticles[0].post_author}}
+        </div>
+        <div class="flex items-center text-secondary">
+          <mat-icon class="icon-size-4 me-2" svgIcon="mat_solid:access_time"></mat-icon>
+          {{selectedArticles[0].post_date}}
+        </div>
+      </div>
+
+      <div class="font-bold text-lg mb-2 mx-1">{{selectedArticles[0].post_title}}</div>
+
+      <p class="mx-1">{{selectedArticles[0].post_excerpt}}</p>
+
+    </div>
+    <div class="article flex py-3 mx-1" *ngFor="let article of selectedArticles; let i = index">
+      <ng-container *ngIf="i!== 0">
+        <div class="max-w-1/3">
+          <div class="w-26 h-20 overflow-hidden  flex justify-center mat-elevation-z3">
+            <img class=" img-h-max" [src]="article.image"
+                 [alt]="article.post_title">
           </div>
         </div>
-      </mat-tab>
-
-    </mat-tab-group>
-  </mat-card-content>
-
-</mat-card>
+        <div class="ms-3">
+          <div class="flex items-center">
+            <mat-icon class="icon-size-4 me-2 text-secondary" svgIcon="mat_solid:access_time"></mat-icon>
+            {{selectedArticles[0].post_date}}
+          </div>
+          <div class="font-bold text-lg">{{article.post_title}}</div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</app-card>

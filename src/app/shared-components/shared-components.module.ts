@@ -1,26 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LastArticlesComponent } from './last-articles.component';
+import { CardComponent } from './card/card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTabsModule} from "@angular/material/tabs";
-import {SharedComponentsModule} from "../../../shared-components/shared-components.module";
+import {DragDropModule} from "@angular/cdk/drag-drop";
+import {MatMenuModule} from "@angular/material/menu";
 
 
 
 @NgModule({
-    declarations: [
-        LastArticlesComponent
-    ],
-    exports: [
-        LastArticlesComponent
-    ],
+  declarations: [
+    CardComponent
+  ],
+  exports: [
+    CardComponent
+  ],
     imports: [
         CommonModule,
         MatCardModule,
         MatIconModule,
         MatTabsModule,
-        SharedComponentsModule
+        DragDropModule,
+        MatMenuModule
     ]
 })
-export class LastArticlesModule { }
+export class SharedComponentsModule { }

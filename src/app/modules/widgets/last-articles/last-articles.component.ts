@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-last-articles',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LastArticlesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
+
+  @Input() lastNews: any = [];
+  activeLink = 0;
+  days = ['سبت', 'أحد', 'أثنين', 'ثلاثاء', 'أربع', 'خميس', 'جمعة']
 
   ngOnInit(): void {
   }
 
+  log($event: number) {
+    this.activeLink =  $event;
+    console.log('$event', $event)
+  }
 }

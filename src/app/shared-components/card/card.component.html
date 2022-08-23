@@ -1,0 +1,117 @@
+<div cdkDropList class="example-list mt-3" >
+  <div class="example-box" #box
+       cdkDragLockAxis="x" cdkDrag (cdkDragDropped)="dragDropped($event)" (cdkDragStarted)="dragStarted($event)"
+       [cdkDragStartDelay]="80"
+       (cdkDragMoved)="dragMoved($event)">
+    <div class="example-custom-placeholder" [style.height.px]="this.boxHeight" *cdkDragPlaceholder>
+      <div [className]="'action ' + dragDirection" [style.opacity]="opacity" ><mat-icon class="icon-size-8 text-white" svgIcon="heroicons_outline:collection"></mat-icon> قرأته</div>
+
+    </div>
+    <mat-card class=" p-0 overflow-hidden flex flex-col items-stretch" style="min-height: 150px" >
+      <mat-card-title class="flex justify-between  p-3">
+        <span>{{title}}</span>
+
+        <button [matMenuTriggerFor]="menu">
+          <mat-icon svgIcon="heroicons_outline:dots-vertical"></mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><mat-icon class="icon-size-4" svgIcon="heroicons_outline:collection"></mat-icon> حركه الي اسفل </button>
+          <ng-content select="[menu]"></ng-content>
+        </mat-menu>
+      </mat-card-title>
+
+
+      <div *ngIf="!tapCount" class="flex-grow px-3">
+        <ng-content></ng-content>
+      </div>
+
+      <mat-card-content *ngIf="tapCount" class="flex-grow">
+        <mat-tab-group dynamicHeight headerPosition="below" [selectedIndex]="activeTap">
+
+          <mat-tab *ngIf="tapCount >= 1">
+            <div class="mx-3">
+              <ng-content select=".tab1"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 2">
+            <div class="mx-3">
+              <ng-content select=".tab2"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 3">
+            <div class="mx-3">
+              <ng-content select=".tab3"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 4">
+            <div class="mx-3">
+              <ng-content select=".tab4"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 5">
+            <div class="mx-3">
+              <ng-content select=".tab5"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 6">
+            <div class="mx-3">
+              <ng-content select=".tab6"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 7">
+            <div class="mx-3">
+              <ng-content select=".tab7"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 8">
+            <div class="mx-3">
+              <ng-content select=".tab8"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 9">
+            <div class="mx-3">
+              <ng-content select=".tab9"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 10">
+            <div class="mx-3">
+              <ng-content select=".tab10"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 11">
+            <div class="mx-3">
+              <ng-content select=".tab11"></ng-content>
+            </div>
+          </mat-tab>
+          <mat-tab *ngIf="tapCount >= 12">
+            <div class="mx-3">
+              <ng-content select=".tab12"></ng-content>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+
+      </mat-card-content>
+
+      <nav mat-tab-nav-bar *ngIf="tabTitles && tabTitles.length>0" class="w-full">
+        <a mat-tab-link *ngFor="let link of tabTitles; let i = index"
+           (click)="tabNavigate(i)"
+           [active]="activeTap == i"> {{link}} </a>
+
+      </nav>
+
+    </mat-card>
+  </div>
+</div>
+
+
+<!--
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" cdkDragLockAxis="x" cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    Episode I - The Phantom Menace
+  </div>
+</div>
+-->
+

@@ -17,9 +17,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger
     this._route.queryParams.subscribe((params)=>{
-      debugger
+
       const snap = this._route.snapshot;
       /*if (snap.params['code']) {
         this._auth.loginCallback(snap.params);
@@ -28,6 +27,10 @@ export class AppComponent implements OnInit {
       }*/
     });
 
+  }
+
+  login() {
+    this._auth.login();
   }
 }
 

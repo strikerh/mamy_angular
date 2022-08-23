@@ -1,32 +1,29 @@
-<mat-card class="my-3 p-0 overflow-hidden">
-  <mat-card-title class="flex justify-between  p-3">
-    <span> عرفتي أخر الأخبار </span>
-    <mat-icon svgIcon="heroicons_outline:dots-vertical"></mat-icon>
-  </mat-card-title>
+<app-card title="عرفتي آخر الأخبار" class="mt-10"
+          [tabTitles]="days"
+          [activeTap]="0">
 
-  <mat-card-content class="">
-    <mat-tab-group headerPosition="below">
-      <mat-tab [label]="days" *ngFor="let days of ['سبت', 'أحد', 'أثنين', 'ثلاثاء', 'أربع', 'خميس', 'جمعة' ]">
-        <div class="mb-3">
-          <div class="article flex p-3" *ngFor="let d of [0,1]">
-            <div class="max-w-1/3">
-              <div class="w-26 h-20 overflow-hidden rounded-xl flex justify-center shadow">
-                <img class=" img-h-max" src="https://mamydays.com/wp-content/uploads/2021/03/images-6-780x385.jpeg"
-                     alt="تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها">
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="flex items-center">
-                <mat-icon class="icon-size-4 me-2" svgIcon="mat_solid:access_time"></mat-icon>
-                منذ 3 ساعات
-              </div>
-              <div class="font-bold text-lg">تعرفي على أفضل الزيوت العطرية للشعر,فوائدها ,أنواعها وطرق استخدامها</div>
-            </div>
-          </div>
-        </div>
-      </mat-tab>
+  <ng-container class="tab1">     <div class="article flex p-3" *ngFor="let article of lastNews">
+    <div class="max-w-1/3">
+      <div class="w-26 h-20 overflow-hidden rounded-xl flex justify-center shadow">
+        <img class=" img-h-max" [src]="article.image"
+             [alt]="article.post_title">
+      </div>
+    </div>
+    <div class="ms-3">
+      <div class="flex items-center">
+        <mat-icon class="icon-size-4 me-2" svgIcon="mat_solid:access_time"></mat-icon>
+        {{article.post_date}}
+      </div>
+      <div class="font-bold text-lg">{{article.post_title}}</div>
+    </div>
+  </div></ng-container>
+  <ng-container class="tab2"> <div class="text-secondary flex justify-center items-center">لا يوجد محتوي</div></ng-container>
+  <ng-container class="tab3"> <div class="text-secondary flex justify-center items-center">لا يوجد محتوي</div></ng-container>
+  <ng-container class="tab4"> <div class="text-secondary flex justify-center items-center">لا يوجد محتوي</div></ng-container>
+  <ng-container class="tab5"> <div class="text-secondary flex justify-center items-center">لا يوجد محتوي</div></ng-container>
+  <ng-container class="tab6"> <div class="text-secondary flex justify-center items-center">لا يوجد محتوي</div></ng-container>
+  <ng-container class="tab7"> <div class="text-secondary flex justify-center items-center">لا يوجد محتوي</div></ng-container>
 
-    </mat-tab-group>
-  </mat-card-content>
 
-</mat-card>
+</app-card>
+

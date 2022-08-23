@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-watch": "ng build --watch",
-    "start-host": "ng serve --host 0.0.0.0  --open",
+    "start-front-end-host": "ng serve --host 0.0.0.0 --port 4300  --open",
     "start-pwa": "http-server -p 8080 -c-1 dist/mmy_app",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "@angular/service-worker": "^14.1.0",
+    "jwt-decode": "^3.1.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

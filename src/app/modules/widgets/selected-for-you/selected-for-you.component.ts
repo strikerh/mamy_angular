@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-selected-for-you',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectedForYouComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
+  @Input() selectedArticles: any = [];
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      console.log('selectedArticles', this.selectedArticles)
+    }, 1000);
+
+
+  }
 }

@@ -1,20 +1,23 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+const wpUrl = 'http://localhost:10034';
 
 export const environment = {
   production: false,
 
-  bashUrl: 'http://localhost:4200',
-  wpUrl: 'http://profile.mamydays.lcl',
+  bashUrl: 'http://localhost:4300',
+  wpUrl: wpUrl,
+  mmyBackend: 'http://localhost:3000',
 
   authConfig: {
-    authUrl: 'http://profile.mamydays.lcl/oauth/authorize',
-    accessTokenUrl: 'http://profile.mamydays.lcl/oauth/token/',
-    client_id: 'fwB3MSTlVyyU9tfXUMTCy6AMvULIVzcwelMSQ1gO',
-    client_secret: 'r4oX7ng95kFoZD5FCQkkZlEkO90wykPs35OxjJkq',
-    redirect_uri: 'http://localhost:4200',
+    authUrl: `${wpUrl}/oauth/authorize`,
+    accessTokenUrl: `${wpUrl}/oauth/token/`,
+    client_id: 'wCvj5LAn9JsL1a7Q2lAqJyjB0xZ5bHH2889SJGi9',
+    client_secret: 'Gr3KZR3CSBM0QdShzlByzsDxLwmShs4u9GrKDWsF',
+    redirect_uri: 'http://localhost:4300',
     response_type: 'code',
+    grant_type: 'authorization_code'
   }
 
 };

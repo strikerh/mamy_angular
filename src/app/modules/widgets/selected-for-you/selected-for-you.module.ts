@@ -4,6 +4,7 @@ import { SelectedForYouComponent } from './selected-for-you.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MatTabsModule} from "@angular/material/tabs";
+import {SharedComponentsModule} from "../../../shared-components/shared-components.module";
 
 
 
@@ -14,11 +15,12 @@ import {MatTabsModule} from "@angular/material/tabs";
     exports: [
         SelectedForYouComponent
     ],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatCardModule,
-    MatTabsModule
-  ]
+    imports: [
+        CommonModule,
+        MatIconModule,
+        MatCardModule,
+        MatTabsModule,
+        SharedComponentsModule
+    ]
 })
 export class SelectedForYouModule { }
